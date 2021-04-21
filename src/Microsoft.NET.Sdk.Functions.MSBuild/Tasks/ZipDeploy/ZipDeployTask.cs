@@ -64,13 +64,13 @@ namespace Microsoft.NET.Sdk.Functions.Tasks
 
                 zipDeployPublishUrl = publishUrl + "api/zipdeploy";
             }
-            else if(!string.IsNullOrEmpty(siteName))
+            else if (!string.IsNullOrEmpty(siteName))
             {
                 zipDeployPublishUrl = $"https://{siteName}.scm.azurewebsites.net/api/zipdeploy";
             }
             else
             {
-                if(logMessages)
+                if (logMessages)
                 {
                     Log.LogError(Resources.NeitherSiteNameNorPublishUrlGivenError);
                 }
